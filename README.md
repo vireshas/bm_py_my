@@ -1,2 +1,1 @@
-Benchmarking C and pure Python Mysql adapters
-========
+** Benchmarking C and pure Python Mysql adapters with Gevent **
