@@ -17,6 +17,7 @@ def make_10k_db_calls(i):
     i = str(i)
     query = 'insert into bm(id,col,value) values(%s,"%s","%s")' % (i, 'col'+i, 'value'+i)
     cursor.execute(query)
+    cnx.commit()
     query = 'select * from bm where id=%s' % (i)
     cursor.execute(query)
     print cursor.fetchone()
