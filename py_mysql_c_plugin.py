@@ -25,7 +25,7 @@ def make_10k_db_calls(i):
 import time
 start = time.time()
 
-jobs =  [ gevent.spawn(make_10k_db_calls, i) for i in xrange(100)]
+jobs =  [ gevent.spawn(make_10k_db_calls, i) for i in xrange(10000)]
 gevent.joinall(jobs)
 cnx.commit()
 
